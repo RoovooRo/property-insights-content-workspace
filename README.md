@@ -1,35 +1,53 @@
 # Social content workspace
 
-A private web app I worked on to bring social account reporting and post drafting into one place. This public repository explains the work without publishing the application, connected accounts, or real content.
-
-## The problem
-
-The work combined two recurring tasks. Someone managing social content needed to review account performance and prepare a post with images and copy. The app also brought property market data into the same workspace so market information could inform content decisions.
+I worked on a private web app for drafting social posts, reviewing account performance, and exploring property market data. This public case study shows selected parts of the interface without publishing the application or any connected account data.
 
 ## What I built
 
-- An analytics view for account and post metrics. It includes time filters, performance charts, audience data, and comparisons across content types. The private codebase has a Meta Graph API client and a rule-based recommendation fallback.
-- A post drafting workspace with a chat panel, saved images, an editable preview, caption and hashtag controls, and explicit user actions before image generation.
-- A market data view with filters, tables, charts, and a coverage display. The coverage display distinguishes months with price data from months with only transaction counts. That distinction keeps missing prices visible.
+- A post editor with chat, saved photos, a live image preview, editable captions and hashtags, and publish and schedule controls.
+- An analytics view with account metrics, time filters, charts, hashtag performance, and recommendations.
+- A property market view with summary cards, filters, tables, charts, and a data coverage display. The coverage display separates months with price data from months with transaction counts only.
 
-The application is private. These descriptions come from the implementation, not a claim about production use or measured business results. The post editor contains a publishing interface, but the publishing service in this version uses a mock queue. I do not present it as live automated publishing.
+The private codebase includes a Meta Graph API client and a rule-based recommendation fallback. The publishing service in this version uses a mock queue, so the controls shown below do not demonstrate live publishing.
 
-## Interface
+## Post editor
 
-![Post editor from the real app, shown with a demo user and an empty draft](visuals/post-editor.png)
+The first image shows the empty editor. The next two show a request to draft a post, the chat response, the updated photo preview, and the editable copy and publishing controls.
 
-This is the post editor rendered from the private app's React components and styles. I captured its empty state in an isolated local copy. I replaced the brand and user details with demo labels and disconnected the account and photo libraries. No real posts or account data appear in the image. The earlier hand-drawn screens were inaccurate and have been removed.
+![Empty post editor with chat and preview panels](visuals/editor-start.png)
+
+![Chat request and response beside a post preview with a fictional apartment photo](visuals/chat-preview.png)
+
+![Caption, hashtags, platform selection, and publish controls after the draft update](visuals/draft-controls.png)
+
+## Analytics
+
+The analytics view combines summary metrics, a performance chart, and hashtag results. A second capture shows recommendation cards based on the sample metrics.
+
+![Analytics overview with sample account metrics and a performance chart](visuals/analytics-overview.png)
+
+![Recommendation cards and performance chart using sample metrics](visuals/analytics-recommendations.png)
+
+## Property market
+
+The market view shows summary cards and filters. The coverage display shows which area and month combinations have prices, transaction counts only, or no data.
+
+![Property market overview with sample transaction figures](visuals/market-overview.png)
+
+![Data coverage display for fictional areas and months](visuals/market-coverage.png)
+
+## How these images were made
+
+I rendered the private app's React components and styles in an isolated local copy. I changed the visible labels to English for these captures and replaced the brand and user details with demo labels. The app received fictional API responses. The chat exchange was simulated through the app's chat response route and draft update action, so it shows how the interface handles a reply rather than proving a live AI call. The [apartment photo](visuals/mock-apartment.png) is generated mock content. No real posts, customers, accounts, or market records appear here.
 
 ## A small code example
 
-[`examples/coverage.mjs`](examples/coverage.mjs) is an adapted version of one idea from the market data view. For each area and month, it reports whether a price exists, only a transaction count exists, or neither exists. The example uses invented areas and values. It is not the private app's full source or data model.
+[`examples/coverage.mjs`](examples/coverage.mjs) adapts one idea from the market data view. For each area and month, it reports whether a price exists, only a transaction count exists, or neither exists. It uses invented areas and values and is not the private app's source code or data model.
 
-Run the example's tests with Node.js:
+Run its tests with Node.js:
 
 ```bash
 node --test examples/coverage.test.mjs
 ```
 
-## Scope
-
-The repo contains this case study, one screenshot of the real editor with demo details, and one runnable example. It does not contain the private application, its Git history, credentials, customer data, account names, or real posts.
+The application source, credentials, connected accounts, and real content remain private.
