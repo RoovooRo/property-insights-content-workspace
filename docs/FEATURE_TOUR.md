@@ -47,7 +47,7 @@ Four selected areas have distinct seasonal changes, peaks, dips, and occasional 
 
 The interface supports source, sale/purchase, listing-age, property-type, room, and price filters. Sorting options include newest first, price, price per square metre, and longest listed. Saved items have a separate filter. Selection state appears in the URL, so a user can retain a particular view.
 
-The demonstration includes invented listing cards from the supported source labels. Their external links use a reserved invalid domain. It does not demonstrate a live scrape or a successful visit to a source listing.
+The demonstration uses invented listing cards and fictional English source names: Home Listings, Property Board, Local Homes, Owner Direct, and Property Hub. These names replace the private application’s source labels and imply no affiliation. Their external links use a reserved invalid domain. It does not demonstrate a live scrape or a successful visit to a source listing.
 
 ![Listing monitor and its filters](../visuals/property-monitor.png)
 

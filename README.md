@@ -161,7 +161,7 @@ The app includes profile and password forms, connected-account status, and a use
 
 The private app uses Next.js, React, TypeScript, Tailwind CSS, Recharts, and Supabase. It contains a Meta Graph API client, recommendation logic, and AI chat and image workflows. Those services and the application source remain private.
 
-For these captures, I used an isolated local copy of the interface, translated visible labels to English, shortened long control labels, adjusted price-axis bounds for legibility, and replaced account details, area names, and API responses with fictional content. The [apartment image](visuals/mock-apartment.png) is generated mock content. Browser requests to external services were blocked during capture. The synthetic series include peaks, dips, seasonal changes, and gaps to exercise the available views; they do not represent measured performance or real property prices.
+For these captures, I used an isolated local copy of the interface, translated visible labels to English, shortened long control labels, adjusted price-axis bounds for legibility, and replaced account details, area names, listing-source names, and API responses with fictional English content. Dates and visible controls use English formatting. The [apartment image](visuals/mock-apartment.png) is generated mock content. Browser requests to external services were blocked during capture. The synthetic series include peaks, dips, seasonal changes, and gaps to exercise the available views; they do not represent measured performance or real property prices.
 
 ## A small runnable code example
 
