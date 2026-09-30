@@ -1,6 +1,6 @@
-# Social content workspace
+# Property insights and content workspace
 
-I worked on a private web app for drafting social posts, reviewing account performance, and exploring property market data. This public case study shows selected parts of the interface without publishing the application or any connected account data.
+I worked on a private web app for property market analysis, real-estate monitoring, social analytics, and AI-assisted content drafting. This public case study shows selected parts of the interface without publishing the application or any connected account data.
 
 ## What I built
 
